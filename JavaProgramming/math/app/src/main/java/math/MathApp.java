@@ -37,7 +37,5 @@ public class MathApp {
         // Rounding off functions
         System.out.println("The value 7.23423 rounded is: " + Math.round(valueC));
         System.out.println("The value 0.2342 rounded is: " + Math.round(valueD));
-
-        //
     }
 }
