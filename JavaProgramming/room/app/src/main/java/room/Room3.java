@@ -12,6 +12,8 @@ public class Room3 {
      */
     public static void main(String[] args) {
         // Solve the problem
+        JOptionPane.showMessageDialog(null, "Welcome to Room Area Calculator", "Room Area Calculator",
+                JOptionPane.DEFAULT_OPTION);
 
         // declare the variables
         double roomLength;
