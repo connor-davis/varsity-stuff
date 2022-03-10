@@ -30,5 +30,14 @@ public class App {
 
         // Raise a value to the power of 7
         System.out.println("123 to the power of 7 is: " + Math.pow((double) 123, (double) 7));
+
+        // Square root
+        System.out.println("The square root of 9 is: " + Math.sqrt((double) 9));
+
+        // Rounding off functions
+        System.out.println("The value 7.23423 rounded is: " + Math.round(valueC));
+        System.out.println("The value 0.2342 rounded is: " + Math.round(valueD));
+
+        //
     }
 }
