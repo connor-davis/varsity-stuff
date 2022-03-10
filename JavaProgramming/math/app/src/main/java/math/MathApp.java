@@ -8,9 +8,10 @@ public class MathApp {
         return "Hello World!";
     }
 
+    /**
+     * @param args The command line arguments.
+     */
     public static void main(String[] args) {
-        System.out.println(new MathApp().getGreeting());
-
         int valueA = 7;
         int valueB = 5;
 
