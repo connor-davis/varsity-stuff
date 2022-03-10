@@ -1,0 +1,21 @@
+start
+	Declarations
+		num valueOne
+		num valueTwo
+		num sumOf
+		num difference
+
+	output "Please enter first number"
+
+	input valueOne
+
+	output "Please enter second number"
+
+	input valueTwo
+
+	set sumOf = valueOne + valueTwo
+	set difference = valueOne - valueTwo
+
+	output "Sum of numbers: ", sumOf
+	output "Difference of numbers: ", difference
+stop
