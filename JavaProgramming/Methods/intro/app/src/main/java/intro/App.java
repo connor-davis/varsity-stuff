@@ -28,7 +28,7 @@ public class App {
         firstMethod(); // This can only be called if the method is being called from the same class
 
         /**
-         * To call a non static method from a static method, we need to declare the
+         * To call a non static method from a static method, we need to instantiate the
          * class we are calling from first and then we can call the method we are
          * looking for.
          */
