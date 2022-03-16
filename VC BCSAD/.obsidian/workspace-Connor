@@ -1,0 +1,105 @@
+{
+  "main": {
+    "id": "02c7a08ff6fa394d",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5cf1fde883b3e19",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "be2ebe2e305971e8",
+    "type": "split",
+    "children": [
+      {
+        "id": "81a3cd0919998178",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8bfeda218ac6aa52",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "cdc1592f525a8a8f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d0af43f85fdfc072",
+    "type": "split",
+    "children": [
+      {
+        "id": "65fb522a70813844",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8f2f8d2a97f304c5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ce5279ba1ef32944",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "a5cf1fde883b3e19",
+  "lastOpenFiles": [
+    "Programming Logic and Design/Independant/Understanding Computer Systems.md",
+    "Java Programming/Independant/High-Level Programming Languages Info.md",
+    "Java Programming/Java Programming Kanban.md",
+    "Java Programming/Independant/Learning Programming Terminology.md",
+    "Learning Programming Terminology  @{2022-02-23}.md",
+    "High-Level Programming Languages Info @{2022-02-23}.md",
+    "Programming Logic and Design/Programming Logic and Design Kanban.md",
+    "Programming Logic and Design/Programming Logic and Design.md",
+    "Java Programming/Java Programming.md",
+    "Personal Projects/ASCII Video/ASCII Video.md"
+  ]
+}

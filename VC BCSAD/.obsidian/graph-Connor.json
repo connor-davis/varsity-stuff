@@ -1,0 +1,44 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": true,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"Java Programming\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:\"Personal Projects\"",
+      "color": {
+        "a": 1,
+        "rgb": 5984992
+      }
+    },
+    {
+      "query": "path:\"Programming Logic and Design\"",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": -2,
+  "nodeSizeMultiplier": 0.878235294117647,
+  "lineSizeMultiplier": 2.17529411764706,
+  "collapse-forces": false,
+  "centerStrength": 0.6,
+  "repelStrength": 12,
+  "linkStrength": 0.8,
+  "linkDistance": 30,
+  "scale": 0.32133638605035897,
+  "close": true
+}

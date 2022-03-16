@@ -1,0 +1,111 @@
+{
+  "main": {
+    "id": "02c7a08ff6fa394d",
+    "type": "split",
+    "children": [
+      {
+        "id": "8edc7dc7888408b3",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Calendar/2022-03-16.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "be2ebe2e305971e8",
+    "type": "split",
+    "children": [
+      {
+        "id": "81a3cd0919998178",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8bfeda218ac6aa52",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "cdc1592f525a8a8f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 355
+  },
+  "right": {
+    "id": "d0af43f85fdfc072",
+    "type": "split",
+    "children": [
+      {
+        "id": "65fb522a70813844",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8f2f8d2a97f304c5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Calendar/2022-03-16.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ce5279ba1ef32944",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "8edc7dc7888408b3",
+  "lastOpenFiles": [
+    "Calendar/2022-03-16.md",
+    "Programming Logic and Design/Class/Class Problem 2.md",
+    "Network Engineering/Class/Components of a communication system.md",
+    "Network Engineering/Class/Characteristics of an effective data communication system.md",
+    "Mathematical Principles of Computer Science/Class/Untitled.md",
+    "Programming Logic and Design/Class/Variables and Constants.md",
+    "Mathematical Principles of Computer Science/Class/Properties and laws of whole numbers.md",
+    "Mathematical Principles of Computer Science/Class/Order of Operations.md",
+    "Mathematical Principles of Computer Science/Class/Grouping symbols and the order of operations.md",
+    "Mathematical Principles of Computer Science/Class/Number line to differenciate between positive and negative integers.md"
+  ]
+}
