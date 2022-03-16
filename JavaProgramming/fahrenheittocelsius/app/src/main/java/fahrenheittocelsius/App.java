@@ -44,7 +44,8 @@ public class App {
         double temperatureInCelsius;
 
         // Calculate the temperature in celcius
-        temperatureInCelsius = temperatureInFahrenheit - 32;
+        temperatureInCelsius = (temperatureInFahrenheit - 32.0) * (5.0 / 9.0);
+        temperatureInCelsius = Math.round(temperatureInCelsius * 100.0) / 100.0;
 
         // Return the temperature in celcius
         return temperatureInCelsius;
