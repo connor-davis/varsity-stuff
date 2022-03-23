@@ -4,11 +4,23 @@
     "type": "split",
     "children": [
       {
+<<<<<<< HEAD
         "id": "07c7f0d867c500ce",
         "type": "leaf",
         "state": {
           "type": "empty",
           "state": {}
+=======
+        "id": "8d8cdd54c05c1560",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Calendar/2022-03-22.md",
+            "mode": "source",
+            "source": false
+          }
+>>>>>>> 3bda5cc3289f9e2bf585dde74f554b31d38c084e
         }
       }
     ],
@@ -65,6 +77,10 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
+=======
+                "file": "Calendar/2022-03-22.md",
+>>>>>>> 3bda5cc3289f9e2bf585dde74f554b31d38c084e
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -91,6 +107,7 @@
     "width": 300,
     "collapsed": true
   },
+<<<<<<< HEAD
   "active": "07c7f0d867c500ce",
   "lastOpenFiles": [
     "Programming Logic and Design/Class/Flow Charts.md",
@@ -103,5 +120,19 @@
     "Calendar/Calendar.md",
     "Network Engineering/Class/Data and Signals.md",
     "Calendar/2022-03-16.md"
+=======
+  "active": "8d8cdd54c05c1560",
+  "lastOpenFiles": [
+    "Calendar/2022-03-22.md",
+    "Calendar/2022-03-16.md",
+    "Programming Logic and Design/Class/Class Problem 2.md",
+    "Network Engineering/Class/Components of a communication system.md",
+    "Network Engineering/Class/Characteristics of an effective data communication system.md",
+    "Mathematical Principles of Computer Science/Class/Untitled.md",
+    "Programming Logic and Design/Class/Variables and Constants.md",
+    "Mathematical Principles of Computer Science/Class/Properties and laws of whole numbers.md",
+    "Mathematical Principles of Computer Science/Class/Order of Operations.md",
+    "Mathematical Principles of Computer Science/Class/Grouping symbols and the order of operations.md"
+>>>>>>> 3bda5cc3289f9e2bf585dde74f554b31d38c084e
   ]
 }
