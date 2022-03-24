@@ -55,6 +55,8 @@ public class TestLease {
                 System.out.write("> ".getBytes());
 
                 lease.setLeaseTerm(Integer.parseInt(scanner.nextLine()));
+
+                System.out.println("\n");
             }
         } catch (IOException ex) {
             ex.printStackTrace();
