@@ -49,7 +49,7 @@ public class TestLease {
                 System.out.println("Please enter the rent amount for lease " + leaseNumber + ":");
                 System.out.write("> ".getBytes());
 
-                lease.setRentAmount(Integer.parseInt(scanner.nextLine()));
+                lease.setRentAmount(Double.parseDouble(scanner.nextLine()));
 
                 System.out.println("Please enter the lease term for lease " + leaseNumber + ":");
                 System.out.write("> ".getBytes());

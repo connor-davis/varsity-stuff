@@ -3,19 +3,19 @@ package thirteen;
 public class Lease {
     private String tenantsName;
     private int apartmentNumber;
-    private int rentAmount;
+    private Double rentAmount;
     private int leaseTerm;
-    private static final int PET_FEE = 10; // b
+    private static final Double PET_FEE = 10.0; // b
 
     public Lease() {
         this.tenantsName = "XXX";
         this.apartmentNumber = 0;
-        this.rentAmount = 1000;
+        this.rentAmount = 1000.0;
         this.leaseTerm = 12;
     }
 
     public void showValues() {
-        int rentBeforePetFee = getRentAmount();
+        Double rentBeforePetFee = getRentAmount();
 
         System.out.println("\n================> Lease Details <================\n");
 
@@ -75,14 +75,14 @@ public class Lease {
     /**
      * @return int return the rentAmount
      */
-    public int getRentAmount() {
+    public Double getRentAmount() {
         return rentAmount;
     }
 
     /**
      * @param rentAmount the rentAmount to set
      */
-    public void setRentAmount(int rentAmount) {
+    public void setRentAmount(Double rentAmount) {
         this.rentAmount = rentAmount;
     }
 
