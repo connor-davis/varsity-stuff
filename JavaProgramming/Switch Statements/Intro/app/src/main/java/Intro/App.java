@@ -30,7 +30,9 @@ public class App {
 
             System.out.println("The year you entered was " + year + ".");
 
-            Animal animal = new Animal(year);
+            Animal animal = new Animal();
+
+            animal.assignDataToAnimalForYear(year);
 
             System.out.println("It is the year of the " + animal.getAnimalName() + ".");
         } catch (IOException ex) {

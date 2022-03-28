@@ -4,7 +4,11 @@ public class Animal {
     private AnimalType animalType;
     private String animalName;
 
-    public Animal(int year) {
+    public Animal() {
+
+    }
+
+    public void assignDataToAnimalForYear(int year) {
         switch (year % 12) {
             case 0:
                 setAnimalName("Monkey");
