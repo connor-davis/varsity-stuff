@@ -1,0 +1,17 @@
+start
+	Declarations
+		num firstNum
+		num secondNum
+		string FIRST = "First number is larger"
+		string SECOND = "Second number is larger"
+		string EQUAL = "Numbers are equal"
+		string FIRST_PROMPT = "Please enter the first number"
+		string SECOND_PROMPT = "Please enter the second number"
+		string END_OF_LINE = "End of program"
+
+	housekeeping()
+
+	detailLoop()
+
+	endofjob()
+stop
