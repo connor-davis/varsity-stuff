@@ -33,7 +33,7 @@ public class Lease {
                     "\nThe new rent amount is: " + getRentAmount());
         }
 
-        System.out.println("\n================================================\n");
+        System.out.println("\n=================================================\n");
     }
 
     public void addPetFee() {
@@ -45,7 +45,7 @@ public class Lease {
     }
 
     /**
-     * @return String return the tenantsName
+     * @return return the tenantsName
      */
     public String getTenantsName() {
         return tenantsName;
@@ -59,7 +59,7 @@ public class Lease {
     }
 
     /**
-     * @return int return the apartmentNumber
+     * @return return the apartmentNumber
      */
     public int getApartmentNumber() {
         return apartmentNumber;
@@ -73,7 +73,7 @@ public class Lease {
     }
 
     /**
-     * @return int return the rentAmount
+     * @return return the rentAmount
      */
     public Double getRentAmount() {
         return rentAmount;
@@ -87,7 +87,7 @@ public class Lease {
     }
 
     /**
-     * @return int return the leaseTerm
+     * @return return the leaseTerm
      */
     public int getLeaseTerm() {
         return leaseTerm;

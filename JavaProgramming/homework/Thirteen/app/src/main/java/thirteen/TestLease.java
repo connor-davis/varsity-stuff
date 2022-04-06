@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @author ST10068305
  */
 public class TestLease {
-    private static ArrayList<Lease> leases = new ArrayList<Lease>();
+    private static final ArrayList<Lease> leases = new ArrayList<>();
 
     /**
      * @param args The command line arguments
