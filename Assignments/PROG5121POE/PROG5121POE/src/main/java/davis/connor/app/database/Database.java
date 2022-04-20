@@ -5,7 +5,7 @@ import org.mapdb.DBMaker;
 import org.mapdb.HTreeMap;
 import org.mapdb.Serializer;
 
-import javax.swing.*;
+import java.io.File;
 import java.util.concurrent.ConcurrentMap;
 
 /**
@@ -23,14 +23,18 @@ public abstract class Database {
     public final String mapName;
 
     public Database(String databaseName, String mapName) {
+        File databasesDir = new File("databases/");
+
+        if (!databasesDir.exists()) databasesDir.mkdir();
+
         database = DBMaker
                 .fileDB("databases/" + databaseName + ".db")
                 .fileMmapEnableIfSupported()
                 .fileChannelEnable()
                 .fileLockDisable()
                 .transactionEnable()
-                .allocateStartSize(1024*1024*128) // 128MB
-                .allocateIncrement(1024*1024*128) // 128MB
+                .allocateStartSize(1024 * 1024 * 128) // 128MB
+                .allocateIncrement(1024 * 1024 * 128) // 128MB
                 .make();
 
         this.mapName = mapName;
