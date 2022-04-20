@@ -1,8 +1,9 @@
 package davis.connor.app.ui.gui.authentication;
 
 import davis.connor.app.database.CurrentUser;
-import davis.connor.app.database.User;
+import davis.connor.app.database.UserDatabase;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 
@@ -11,22 +12,22 @@ public class Authentication {
     }
 
     public boolean loginUser(String username, String password) {
-        User user = new User(username);
-        CurrentUser currentUser = new CurrentUser();
-
         try {
-            if (user.validatePassword(password)) {
-                currentUser.setFirstName(user.get("firstName"));
-                currentUser.setLastName(user.get("lastName"));
+            UserDatabase userDatabase = new UserDatabase(username);
+            CurrentUser currentUser = new CurrentUser();
+
+            if (userDatabase.get("password") == null) return false;
+
+            if (userDatabase.validatePassword(password)) {
+                currentUser.setFirstName(userDatabase.get("firstName"));
+                currentUser.setLastName(userDatabase.get("lastName"));
                 currentUser.setUsername(username);
 
+                userDatabase.close();
                 currentUser.close();
-                user.close();
 
                 return true;
             } else {
-                user.close();
-
                 return false;
             }
         } catch (IOException exception) {
@@ -37,23 +38,24 @@ public class Authentication {
     }
 
     public boolean registerUser(String username, String password, String firstName, String lastName) {
-        User user = new User(username);
-        CurrentUser currentUser = new CurrentUser();
-
         try {
-            String passwordHash = user.hashPassword(password, 1024);
+            UserDatabase userDatabase = new UserDatabase(username);
 
-            user.create(username, passwordHash);
+            String passwordHash = userDatabase.hashPassword(password, 1024);
 
-            user.put("firstName", firstName);
-            user.put("lastName", lastName);
+            userDatabase.create(username, passwordHash);
+
+            userDatabase.put("firstName", firstName);
+            userDatabase.put("lastName", lastName);
+
+            CurrentUser currentUser = new CurrentUser();
 
             currentUser.setFirstName(firstName);
             currentUser.setLastName(lastName);
             currentUser.setUsername(username);
 
+            userDatabase.close();
             currentUser.close();
-            user.close();
 
             return true;
         } catch (NoSuchAlgorithmException | IOException exception) {

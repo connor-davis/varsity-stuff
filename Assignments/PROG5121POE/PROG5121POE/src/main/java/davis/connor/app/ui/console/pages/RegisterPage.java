@@ -1,9 +1,8 @@
 package davis.connor.app.ui.console.pages;
 
-import davis.connor.app.database.User;
+import davis.connor.app.database.UserDatabase;
 import davis.connor.app.utils.Messages;
 
-import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
@@ -18,16 +17,14 @@ public class RegisterPage {
         String username = promptUsername();
         String password = promptPassword();
 
-        User user = new User(username);
-
         try {
-            String passwordHash = user.hashPassword(password, 1024);
+            UserDatabase userDatabase = new UserDatabase(username);
+
+            String passwordHash = userDatabase.hashPassword(password, 1024);
             System.out.println(Messages.REGISTERED_SUCCESSFULLY);
 
-            user.create(username, passwordHash);
-
-            user.close();
-        } catch (NoSuchAlgorithmException | IOException exception) {
+            userDatabase.create(username, passwordHash);
+        } catch (NoSuchAlgorithmException exception) {
             System.out.println(Messages.REGISTRATION_FAILURE);
             exception.printStackTrace();
         }

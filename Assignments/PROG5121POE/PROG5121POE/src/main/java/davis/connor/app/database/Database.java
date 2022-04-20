@@ -1,12 +1,12 @@
 package davis.connor.app.database;
 
-import org.iq80.leveldb.DB;
-import org.iq80.leveldb.Options;
+import org.mapdb.DB;
+import org.mapdb.DBMaker;
+import org.mapdb.HTreeMap;
+import org.mapdb.Serializer;
 
-import java.io.File;
-import java.io.IOException;
-
-import static org.fusesource.leveldbjni.JniDBFactory.*;
+import javax.swing.*;
+import java.util.concurrent.ConcurrentMap;
 
 /**
  * This abstract class can be used in files that we require setting and getting data
@@ -19,33 +19,62 @@ import static org.fusesource.leveldbjni.JniDBFactory.*;
  * @author ST10068305
  */
 public abstract class Database {
-    private DB database;
+    private final DB database;
+    public final String mapName;
 
-    public Database(String name) {
-        Options options = new Options();
+    public Database(String databaseName, String mapName) {
+        database = DBMaker
+                .fileDB("databases/" + databaseName + ".db")
+                .fileMmapEnableIfSupported()
+                .fileChannelEnable()
+                .fileLockDisable()
+                .transactionEnable()
+                .allocateStartSize(1024*1024*128) // 128MB
+                .allocateIncrement(1024*1024*128) // 128MB
+                .make();
 
-        options.createIfMissing(true);
-
-        try {
-            database = factory.open(new File("databases/" + name), options);
-        } catch (IOException exception) {
-            exception.printStackTrace();
-        }
+        this.mapName = mapName;
     }
 
     public String get(String key) {
-        return asString(database.get(bytes(key)));
+        ConcurrentMap<String, String> map = database.hashMap(mapName, Serializer.STRING, Serializer.STRING).createOrOpen();
+
+        return map.get(key);
     }
 
     public void put(String key, String value) {
-        database.put(bytes(key), bytes(value));
+        HTreeMap<String, String> map = database.hashMap(mapName, Serializer.STRING, Serializer.STRING).createOrOpen();
+
+        map.put(key, value);
+
+        database.commit();
+    }
+
+    public void put(String key, int value) {
+        HTreeMap<String, Integer> map = database.hashMap(mapName, Serializer.STRING, Serializer.INTEGER).createOrOpen();
+
+        map.put(key, value);
+    }
+
+    public void put(String key, long value) {
+        HTreeMap map = database.hashMap(mapName, Serializer.STRING, Serializer.LONG).createOrOpen();
+
+        map.put(key, value);
+    }
+
+    public void put(String key, boolean value) {
+        HTreeMap map = database.hashMap(mapName, Serializer.STRING, Serializer.BOOLEAN).createOrOpen();
+
+        map.put(key, value);
     }
 
     public void delete(String key) {
-        database.delete(bytes(key));
+        HTreeMap map = database.hashMap(mapName, Serializer.STRING, Serializer.CLASS).createOrOpen();
+
+        map.remove(key);
     }
 
-    public void close() throws IOException {
+    public void close() {
         database.close();
     }
 }

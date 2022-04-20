@@ -1,8 +1,10 @@
 package davis.connor.app.database;
 
+import java.io.IOException;
+
 public class CurrentUser extends Database {
-    public CurrentUser() {
-        super("user");
+    public CurrentUser() throws IOException {
+        super("users", "currentUser");
     }
 
     public String getFirstName() {

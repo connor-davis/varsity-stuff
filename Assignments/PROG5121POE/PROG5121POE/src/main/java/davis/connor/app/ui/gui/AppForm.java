@@ -16,7 +16,15 @@ public class AppForm extends JFrame {
     private JLabel welcomeUserMessageLabel;
     private JButton logoutButton;
     private AuthenticationForm authenticationForm;
-    private CurrentUser currentUser = new CurrentUser();
+    private CurrentUser currentUser;
+
+    {
+        try {
+            currentUser = new CurrentUser();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public AppForm(AuthenticationForm authenticationForm) {
         super("Task One");
@@ -68,11 +76,6 @@ public class AppForm extends JFrame {
             this.dispose();
 
             currentUser.logoutUser();
-            try {
-                currentUser.close();
-            } catch (IOException exception) {
-                exception.printStackTrace();
-            }
 
             authenticationForm.reset();
             authenticationForm.updateUI();
