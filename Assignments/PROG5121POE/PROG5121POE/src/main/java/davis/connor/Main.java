@@ -28,15 +28,23 @@
  */
 package davis.connor;
 
+import com.formdev.flatlaf.FlatIntelliJLaf;
 import davis.connor.app.App;
 
+import javax.swing.*;
+
 /**
+ * The gui library used in this application is: <a href="https://github.com/JFormDesigner/FlatLaf">https://github.com/JFormDesigner/FlatLaf</a>
+ *
  * Connor Davis
  *
  * @author ST10068305
  */
 public class Main {
     public static void main(String[] args) {
-        new App();
+        App app = new App();
+
+        app.registerUI();
+        app.showUI();
     }
 }

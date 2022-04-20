@@ -30,6 +30,10 @@ public class Messages {
             \nWelcome to the program, please authenticate
             or type "quit" to exit program.
             """;
+    public static final String WELCOME_USER_MESSAGE
+            = """
+            \nWelcome $firstName $lastName, it is great to see you again.
+            """;
     public static final String LOGIN_OR_REGISTER_PROMPT = "Authenticate [login/register]:";
     public static final String INCORRECT_OPTION = "\nPlease choose a valid option.\n";
 

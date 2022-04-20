@@ -1,64 +1,66 @@
-package davis.connor.app.ui.console.pages;
+package davis.connor.app.ui.gui.authentication;
 
+import davis.connor.app.database.CurrentUser;
 import davis.connor.app.database.User;
-import davis.connor.app.utils.Messages;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
-import java.util.Scanner;
 
-public class RegisterPage {
-    private final Scanner scanner;
-
-    public RegisterPage(Scanner scanner) {
-        this.scanner = scanner;
+public class Authentication {
+    public Authentication() {
     }
 
-    public void display() {
-        String username = promptUsername();
-        String password = promptPassword();
-
+    public boolean loginUser(String username, String password) {
         User user = new User(username);
+        CurrentUser currentUser = new CurrentUser();
 
         try {
-            String passwordHash = user.hashPassword(password, 1024);
-            System.out.println(Messages.REGISTERED_SUCCESSFULLY);
+            if (user.validatePassword(password)) {
+                currentUser.setFirstName(user.get("firstName"));
+                currentUser.setLastName(user.get("lastName"));
+                currentUser.setUsername(username);
 
-            user.create(username, passwordHash);
+                currentUser.close();
+                user.close();
 
-            user.close();
-        } catch (NoSuchAlgorithmException | IOException exception) {
-            System.out.println(Messages.REGISTRATION_FAILURE);
+                return true;
+            } else {
+                user.close();
+
+                return false;
+            }
+        } catch (IOException exception) {
             exception.printStackTrace();
+
+            return false;
         }
     }
 
-    /**
-     * Here we prompt the user for their
-     * username and apply validation to
-     * the username before returning it.
-     *
-     * @return username
-     */
-    public String promptUsername() {
-        System.out.println(Messages.USERNAME_PROMPT);
-        System.out.print("> ");
+    public boolean registerUser(String username, String password, String firstName, String lastName) {
+        User user = new User(username);
+        CurrentUser currentUser = new CurrentUser();
 
-        String username = this.scanner.nextLine();
+        try {
+            String passwordHash = user.hashPassword(password, 1024);
 
-        do {
-            if (checkUserName(username)) {
-                System.out.println(Messages.VALID_USERNAME);
+            user.create(username, passwordHash);
 
-                return username;
-            }
+            user.put("firstName", firstName);
+            user.put("lastName", lastName);
 
-            System.out.println(Messages.INVALID_USERNAME);
+            currentUser.setFirstName(firstName);
+            currentUser.setLastName(lastName);
+            currentUser.setUsername(username);
 
-            promptUsername();
+            currentUser.close();
+            user.close();
 
-            return null;
-        } while (true);
+            return true;
+        } catch (NoSuchAlgorithmException | IOException exception) {
+            exception.printStackTrace();
+
+            return false;
+        }
     }
 
     /**
@@ -87,41 +89,13 @@ public class RegisterPage {
     }
 
     /**
-     * Here we prompt the user for their
-     * password and apply validation to
-     * the password before returning it.
-     *
-     * @return password
-     */
-    private String promptPassword() {
-        System.out.println(Messages.PASSWORD_PROMPT);
-        System.out.print("> ");
-
-        String password = scanner.nextLine();
-
-        do {
-            if (checkPasswordComplexity(password)) {
-                System.out.println(Messages.VALID_PASSWORD);
-
-                return password;
-            }
-
-            System.out.println(Messages.INVALID_PASSWORD);
-
-            promptPassword();
-
-            return null;
-        } while (true);
-    }
-
-    /**
      * Here we apply validation boolean checks
      * to the supplied password.
      *
      * @param password The users password
      * @return true/false
      */
-    private boolean checkPasswordComplexity(String password) {
+    public boolean checkPasswordComplexity(String password) {
         /*
           We make sure that the password
           contains at least 8 characters.

@@ -1,6 +1,12 @@
 package davis.connor.app;
 
-import davis.connor.app.ui.console.Console;
+import com.formdev.flatlaf.FlatIntelliJLaf;
+import davis.connor.app.ui.gui.AppForm;
+import davis.connor.app.ui.gui.AuthenticationForm;
+
+import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 /**
  * Connor Davis
@@ -8,9 +14,22 @@ import davis.connor.app.ui.console.Console;
  * @author ST10068305
  */
 public class App {
-    public App() {
-        Console console = new Console();
 
-        console.display();
+    public App() {
+    }
+
+    public void registerUI() {
+        try {
+            UIManager.setLookAndFeel(new FlatIntelliJLaf());
+
+            UIManager.put("Component.focusWidth", 0);
+        } catch (Exception ex) {
+            System.err.println("Failed to initialize LaF");
+        }
+    }
+
+    public void showUI() {
+        AuthenticationForm authenticationForm = new AuthenticationForm();
+        authenticationForm.setVisible(true);
     }
 }

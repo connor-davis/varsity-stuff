@@ -12,17 +12,13 @@ import java.security.SecureRandom;
  * The cryptography library used: <a href="https://www.mindrot.org/projects/jBCrypt/">https://www.mindrot.org/projects/jBCrypt/</a>
  */
 public class User extends Database {
-    public User() {
-        super("user");
+    public User(String username) {
+        super(username);
     }
 
     public void create(String username, String passwordHash) {
         put("username", username);
         put("password", passwordHash);
-    }
-
-    public String getUsername() {
-        return get("username");
     }
 
     public String hashPassword(String password, int saltComplexity) throws NoSuchAlgorithmException {
