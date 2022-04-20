@@ -1,0 +1,7 @@
+/build/
+/gradle/
+*.db
+*.db.*
+.gradle
+.idea
+/out/
