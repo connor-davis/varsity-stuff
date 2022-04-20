@@ -1,10 +1,10 @@
 package davis.connor.app.ui.gui.authentication;
 
-import davis.connor.app.utils.Messages;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class AuthenticationTest {
     @Test
@@ -12,11 +12,8 @@ class AuthenticationTest {
     void loginUser() {
         Authentication authentication = new Authentication();
 
-        boolean loggedIn = authentication.loginUser("cdav_", "@Cp2606#$%");
-        boolean notLoggedIn = authentication.loginUser("connor", "password");
-
-        assertTrue(loggedIn, "Hello World");
-        assertFalse(notLoggedIn, "Hello World");
+        assertTrue(authentication.loginUser("cdav_", "@Cp2606#$%"), "Hello World");
+        assertFalse(authentication.loginUser("connor", "password"), "Hello World");
     }
 
     @Test
