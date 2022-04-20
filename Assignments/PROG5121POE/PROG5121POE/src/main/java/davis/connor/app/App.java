@@ -1,12 +1,9 @@
 package davis.connor.app;
 
 import com.formdev.flatlaf.FlatIntelliJLaf;
-import davis.connor.app.ui.gui.AppForm;
 import davis.connor.app.ui.gui.AuthenticationForm;
 
 import javax.swing.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 /**
  * Connor Davis

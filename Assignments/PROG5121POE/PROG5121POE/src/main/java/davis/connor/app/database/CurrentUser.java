@@ -30,8 +30,8 @@ public class CurrentUser extends Database {
     }
 
     public void logoutUser() {
-        put("firstName", null);
-        put("lastName", null);
-        put("username", null);
+        delete("firstName");
+        delete("lastName");
+        delete("username");
     }
 }

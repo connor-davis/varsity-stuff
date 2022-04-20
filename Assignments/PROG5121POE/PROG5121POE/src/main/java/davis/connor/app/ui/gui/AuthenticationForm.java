@@ -11,7 +11,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class AuthenticationForm extends JFrame {
-    private boolean isLoginMethod = false;
+    private boolean isLoginMethod = true;
     private JPanel contentPane;
     private JPanel authenticationCard;
     private JTextField usernameField;
@@ -50,7 +50,7 @@ public class AuthenticationForm extends JFrame {
         updateUI();
     }
 
-    private void updateUI() {
+    void updateUI() {
         this.pack();
         this.setSize(new Dimension(300, getHeight()));
         this.setLocationRelativeTo(null);
@@ -66,8 +66,26 @@ public class AuthenticationForm extends JFrame {
     public void showApp() {
         setVisible(false);
 
-        AppForm appForm = new AppForm();
+        AppForm appForm = new AppForm(this);
         appForm.setVisible(true);
+    }
+
+    public void reset() {
+        firstNameLabel.setVisible(false);
+        firstNameField.setVisible(false);
+        lastNameLabel.setVisible(false);
+        lastNameField.setVisible(false);
+
+        errorMessageLabel.setText("");
+        usernameValidLabel.setText("");
+        passwordValidLabel.setText("");
+
+        firstNameField.setText("");
+        lastNameField.setText("");
+        usernameField.setText("");
+        passwordField.setText("");
+
+        isLoginMethod = true;
     }
 
     public void buttonListeners() {

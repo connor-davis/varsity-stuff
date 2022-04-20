@@ -41,6 +41,10 @@ public abstract class Database {
         database.put(bytes(key), bytes(value));
     }
 
+    public void delete(String key) {
+        database.delete(bytes(key));
+    }
+
     public void close() throws IOException {
         database.close();
     }

@@ -1,5 +1,6 @@
 package davis.connor.app.ui.gui;
 
+import com.formdev.flatlaf.FlatClientProperties;
 import davis.connor.app.database.CurrentUser;
 import davis.connor.app.ui.gui.util.Colors;
 import davis.connor.app.utils.Messages;
@@ -8,15 +9,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import java.io.IOException;
 
 public class AppForm extends JFrame {
     private JPanel contentPane;
     private JLabel welcomeUserMessageLabel;
+    private JButton logoutButton;
+    private AuthenticationForm authenticationForm;
+    private CurrentUser currentUser = new CurrentUser();
 
-    public AppForm() {
+    public AppForm(AuthenticationForm authenticationForm) {
         super("Task One");
+        this.authenticationForm = authenticationForm;
 
         defaults();
     }
@@ -28,11 +32,15 @@ public class AppForm extends JFrame {
         updateUI();
 
         displayWelcomeMessage();
+
+        modifyButtons();
+
+        buttonListeners();
     }
 
     private void updateUI() {
         this.pack();
-        this.setSize(new Dimension(300, 400));
+        this.setSize(new Dimension(1280, 720));
         this.setLocationRelativeTo(null);
     }
 
@@ -44,8 +52,6 @@ public class AppForm extends JFrame {
     }
 
     public void displayWelcomeMessage() {
-        CurrentUser currentUser = new CurrentUser();
-
         String welcomeMessage = Messages.WELCOME_USER_MESSAGE;
 
         welcomeMessage = welcomeMessage.replace("$firstName", currentUser.getFirstName());
@@ -53,15 +59,32 @@ public class AppForm extends JFrame {
 
         welcomeUserMessageLabel.setText(welcomeMessage);
 
-        addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                try {
-                    currentUser.close();
-                } catch (IOException exception) {
-                    exception.printStackTrace();
-                }
+        updateUI();
+    }
+
+    public void buttonListeners() {
+        logoutButton.addActionListener(event -> {
+            this.setVisible(false);
+            this.dispose();
+
+            currentUser.logoutUser();
+            try {
+                currentUser.close();
+            } catch (IOException exception) {
+                exception.printStackTrace();
             }
+
+            authenticationForm.reset();
+            authenticationForm.updateUI();
+
+            authenticationForm.setVisible(true);
         });
+    }
+
+    private void modifyButtons() {
+        logoutButton.setBackground(Colors.GRAY_100);
+        logoutButton.setForeground(Colors.BLUE_500);
+        logoutButton.setFocusPainted(false);
+        logoutButton.setBorderPainted(false);
     }
 }
