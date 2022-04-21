@@ -7,13 +7,12 @@ import davis.connor.app.utils.Messages;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 
 public class AppForm extends JFrame {
     private JPanel contentPane;
-    private JButton addTasksButton;
-    private JButton showReportButton;
-    private JButton quitButton;
     private JLabel welcomeUserMessageLabel;
     private JButton logoutButton;
     private AuthenticationForm authenticationForm;
@@ -28,7 +27,7 @@ public class AppForm extends JFrame {
     }
 
     public AppForm(AuthenticationForm authenticationForm) {
-        super("EasyKanban");
+        super("Task One");
         this.authenticationForm = authenticationForm;
 
         defaults();
@@ -49,8 +48,7 @@ public class AppForm extends JFrame {
 
     private void updateUI() {
         this.pack();
-        this.setSize(new Dimension(300, 400));
-        this.setResizable(false);
+        this.setSize(new Dimension(1280, 720));
         this.setLocationRelativeTo(null);
     }
 
@@ -67,32 +65,29 @@ public class AppForm extends JFrame {
         welcomeMessage = welcomeMessage.replace("$firstName", currentUser.getFirstName());
         welcomeMessage = welcomeMessage.replace("$lastName", currentUser.getLastName());
 
-        JOptionPane.showMessageDialog(null, welcomeMessage, "EasyKanban", JOptionPane.INFORMATION_MESSAGE);
+        welcomeUserMessageLabel.setText(welcomeMessage);
+
+        updateUI();
     }
 
     public void buttonListeners() {
-        showReportButton.addActionListener(event -> {
-            JOptionPane.showMessageDialog(null, "Coming Soon", "EasyKanban", JOptionPane.INFORMATION_MESSAGE);
+        logoutButton.addActionListener(event -> {
+            this.setVisible(false);
+            this.dispose();
+
+            currentUser.logoutUser();
+
+            authenticationForm.reset();
+            authenticationForm.updateUI();
+
+            authenticationForm.setVisible(true);
         });
     }
 
     private void modifyButtons() {
-        addTasksButton.setBackground(Colors.BLUE_500);
-        addTasksButton.setForeground(Colors.WHITE);
-        addTasksButton.putClientProperty(FlatClientProperties.STYLE, "arc: 10");
-        addTasksButton.setFocusPainted(false);
-        addTasksButton.setBorderPainted(false);
-
-        showReportButton.setBackground(Colors.BLUE_500);
-        showReportButton.setForeground(Colors.WHITE);
-        showReportButton.putClientProperty(FlatClientProperties.STYLE, "arc: 10");
-        showReportButton.setFocusPainted(false);
-        showReportButton.setBorderPainted(false);
-
-        quitButton.setBackground(Colors.RED_500);
-        quitButton.setForeground(Colors.WHITE);
-        quitButton.putClientProperty(FlatClientProperties.STYLE, "arc: 10");
-        quitButton.setFocusPainted(false);
-        quitButton.setBorderPainted(false);
+        logoutButton.setBackground(Colors.GRAY_100);
+        logoutButton.setForeground(Colors.BLUE_500);
+        logoutButton.setFocusPainted(false);
+        logoutButton.setBorderPainted(false);
     }
 }

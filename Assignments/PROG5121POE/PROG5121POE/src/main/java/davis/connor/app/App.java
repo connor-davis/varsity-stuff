@@ -20,7 +20,6 @@ public class App {
             UIManager.setLookAndFeel(new FlatIntelliJLaf());
 
             UIManager.put("Component.focusWidth", 0);
-            UIManager.put("Button.arc", 10);
         } catch (Exception ex) {
             System.err.println("Failed to initialize LaF");
         }
