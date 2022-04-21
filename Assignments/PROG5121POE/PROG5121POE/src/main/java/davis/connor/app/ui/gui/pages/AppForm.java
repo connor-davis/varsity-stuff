@@ -1,6 +1,6 @@
 package davis.connor.app.ui.gui.pages;
 
-import davis.connor.app.database.CurrentUser;
+import davis.connor.app.database.CurrentUserDatabase;
 import davis.connor.app.ui.gui.util.Colors;
 import davis.connor.app.utils.Messages;
 
@@ -14,11 +14,11 @@ public class AppForm extends JFrame {
     private JButton showReportButton;
     private JButton quitButton;
     private AuthenticationForm authenticationForm;
-    private CurrentUser currentUser;
+    private CurrentUserDatabase currentUserDatabase;
 
     {
         try {
-            currentUser = new CurrentUser();
+            currentUserDatabase = new CurrentUserDatabase();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -60,8 +60,8 @@ public class AppForm extends JFrame {
     public void displayWelcomeMessage() {
         String welcomeMessage = Messages.WELCOME_USER_MESSAGE;
 
-        welcomeMessage = welcomeMessage.replace("$firstName", currentUser.getFirstName());
-        welcomeMessage = welcomeMessage.replace("$lastName", currentUser.getLastName());
+        welcomeMessage = welcomeMessage.replace("$firstName", currentUserDatabase.getFirstName());
+        welcomeMessage = welcomeMessage.replace("$lastName", currentUserDatabase.getLastName());
 
         JOptionPane.showMessageDialog(null, welcomeMessage, "EasyKanban", JOptionPane.INFORMATION_MESSAGE);
     }

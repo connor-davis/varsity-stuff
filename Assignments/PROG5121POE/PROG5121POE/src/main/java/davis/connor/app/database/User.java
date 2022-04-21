@@ -5,13 +5,13 @@ import org.mindrot.jbcrypt.BCrypt;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
+// TODO
 public class User {
     private final String username;
 
     public User(String username, String password) {
         this.username = username;
     }
-
 
     public String hashPassword(String password, int saltComplexity) throws NoSuchAlgorithmException {
         SecureRandom random = new SecureRandom();

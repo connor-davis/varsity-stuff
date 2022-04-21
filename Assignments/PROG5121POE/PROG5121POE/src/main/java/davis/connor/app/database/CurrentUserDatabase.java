@@ -2,8 +2,12 @@ package davis.connor.app.database;
 
 import java.io.IOException;
 
-public class CurrentUser extends Database {
-    public CurrentUser() throws IOException {
+/**
+ * This class handles the current users' data in the database.
+ * @author Connor Davis | ST10068305
+ */
+public class CurrentUserDatabase extends Database {
+    public CurrentUserDatabase() throws IOException {
         super("users", "currentUser");
     }
 

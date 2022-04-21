@@ -9,14 +9,16 @@ import java.io.File;
 import java.util.concurrent.ConcurrentMap;
 
 /**
- * This abstract class can be used in files that we require setting and getting data
- * from.
+ * The database library used is called MapDB,
+ * it allows me to set and update hashmaps in
+ * a local database that will be used throughout
+ * the application.
+ * <p><p>
  * <p>
- * The database library used: <a href="https://github.com/fusesource/leveldbjni">https://github.com/fusesource/leveldbjni</a>
- * <p>
- * Connor Davis
+ * Website: <a href="https://jankotek.gitbooks.io/mapdb/content/">https://jankotek.gitbooks.io/mapdb/content/</a>
+ * </p>
  *
- * @author ST10068305
+ * @author Connor Davis | ST10068305
  */
 public abstract class Database {
     private final DB database;
