@@ -1,7 +1,7 @@
 package davis.connor.app;
 
 import com.formdev.flatlaf.FlatIntelliJLaf;
-import davis.connor.app.ui.gui.AuthenticationForm;
+import davis.connor.app.ui.gui.pages.AuthenticationForm;
 
 import javax.swing.*;
 

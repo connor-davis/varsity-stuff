@@ -1,7 +1,8 @@
-package davis.connor.app.ui.gui;
+package davis.connor.app.ui.gui.pages;
 
 import com.formdev.flatlaf.FlatClientProperties;
 import davis.connor.app.ui.gui.authentication.Authentication;
+import davis.connor.app.ui.gui.pages.AppForm;
 import davis.connor.app.ui.gui.util.Colors;
 import davis.connor.app.utils.Messages;
 
