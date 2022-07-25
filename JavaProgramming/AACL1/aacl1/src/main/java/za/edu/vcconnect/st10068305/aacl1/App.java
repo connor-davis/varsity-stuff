@@ -16,7 +16,7 @@ public class App {
         System.out.println("Starting Bubble sort.");
 
         timeStart = System.currentTimeMillis();
-        performBubbleSort(numbers);
+        int[] bubbleSorted = performBubbleSort(numbers);
         timeEnd = System.currentTimeMillis();
 
         timeTaken = timeEnd - timeStart;
@@ -26,7 +26,7 @@ public class App {
         System.out.println("Starting Insertion sort.");
 
         timeStart = System.currentTimeMillis();
-        performInsertionSort(numbers);
+        int[] insertionSorted = performInsertionSort(numbers);
         timeEnd = System.currentTimeMillis();
 
         timeTaken = timeEnd - timeStart;
@@ -38,8 +38,10 @@ public class App {
      * This method will use the bubble sort algorithm to sort an int[] of numbers.
      * 
      * @param numbers
+     * 
+     * @return int[]
      */
-    public static void performBubbleSort(int[] numbers) {
+    public static int[] performBubbleSort(int[] numbers) {
         for (int x = 0; x < numbers.length; x++) {
             for (int i = 0; i < numbers.length - 1; i++) {
                 if (numbers[i] > numbers[i + 1]) {
@@ -52,12 +54,7 @@ public class App {
             }
         }
 
-        for (int num : numbers) {
-            if (num % 10 >= 1)
-                System.out.print(num + ", \t");
-            else
-                System.out.print(num + ", \n");
-        }
+        return numbers;
     }
 
     /**
@@ -65,8 +62,10 @@ public class App {
      * numbers.
      * 
      * @param numbers
+     * 
+     * @return int[]
      */
-    public static void performInsertionSort(int[] numbers) {
+    public static int[] performInsertionSort(int[] numbers) {
         int n = numbers.length;
 
         for (int i = 0; i < n; i++) {
@@ -81,11 +80,6 @@ public class App {
             numbers[x + 1] = el;
         }
 
-        for (int num : numbers) {
-            if (num % 10 >= 1)
-                System.out.print(num + ", \t");
-            else
-                System.out.print(num + ", \n");
-        }
+        return numbers;
     }
 }
