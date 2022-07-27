@@ -9,7 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Mathematical Principles of Computer Science/Class/Additive and Multiplicative Principles.md",
+            "file": "Network Engineering/Class/Networks.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "111f19a0f66d2861",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Network Systems and Network Protocols.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematical Principles of Computer Science/Class/Additive and Multiplicative Principles.md",
+                "file": "Network Systems and Network Protocols.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,8 +108,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "465c7389adf42c0d",
+  "active": "111f19a0f66d2861",
   "lastOpenFiles": [
+    "Network Systems and Network Protocols.md",
+    "Network Engineering/Class/Networks.md",
     "Mathematical Principles of Computer Science/Class/Additive and Multiplicative Principles.md",
     "Calendar/2022-04-01.md",
     "Calendar/2022-03-25.md",
@@ -105,8 +119,6 @@
     "Calendar/Calendar.md",
     "Calendar/2022-03-17.md",
     "Calendar/2022-03-22.md",
-    "Programming Logic and Design/Class/Flow Charts.md",
-    "Programming Logic and Design/Class/Variables and Constants.md",
-    "Programming Logic and Design/Class/Using a Sentinel Value to End a Program.md"
+    "Programming Logic and Design/Class/Flow Charts.md"
   ]
 }
