@@ -43,7 +43,7 @@ class App {
                     if (books[x][0].startsWith(shortEntry)) {
                         isFound = true;
                         System.out.println(books[x][0] + " was written by " + books[x][1]); // Fixed the index
-                        x = books.length;
+                        // x = books.length;
                     }
 
                 if (!isFound) // Changed the boolean check
