@@ -11,6 +11,6 @@ public class Books {
 
         System.out.println("Book: " + nonFictionBook.getTitle()
                 + "\nPrice: $" + nonFictionBook.getPrice()
-                + "\nType: NonFiction");
+                + "\nType: Non-Fiction");
     }
 }
