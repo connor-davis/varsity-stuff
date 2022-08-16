@@ -1,0 +1,16 @@
+package za.edu.vcconnect.st10068305.api;
+
+public enum Subject {
+    MATHS,
+    PHYSICS,
+    ENGINEERING_GRAPHICS_AND_DESIGN,
+    HISTORY,
+    ARTS_AND_CULTURE,
+    LIFE_ORIENTATION,
+    ENGLISH,
+    AFRIKAANS,
+    ZULU,
+    BUSINESS_STUDIES,
+    ACCOUNTING,
+    CONSUMER_STUDIES
+}

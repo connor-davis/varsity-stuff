@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2da055bc-138d-400b-afb2-740ecdcfb376" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/databases/teachers.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/AccountingTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/AfrikaansTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/ArtsAndCultureTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/BaseTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/BusinessStudiesTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/ConsumerStudiesTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/EngineeringGraphicsAndDesignTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/EnglishTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/HistoryTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/ITeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/LifeOrientationTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/MathsTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/PhysicsTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/employee/ZuluTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/student/BaseStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/student/GradeEightStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/student/GradeElevenStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/student/GradeNineStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/student/GradeTenStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/student/GradeTwelveStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/student/IStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/api/student/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/database/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/database/Databases.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/database/StudentsDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/edu/vcconnect/st10068305/database/TeachersDatabase.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="y2fa2jtw" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DRyYunAur1EVBPnG2zKlEBpBco" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.edu.vcconnect.st10068305.Main" />
+      <module name="PROG6112A1-Q2.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.edu.vcconnect.st10068305.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2da055bc-138d-400b-afb2-740ecdcfb376" name="Changes" comment="" />
+      <created>1660676242394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660676242394</updated>
+      <workItem from="1660676243789" duration="43000" />
+      <workItem from="1660676358028" duration="6662000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
