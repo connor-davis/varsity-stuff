@@ -1,6 +1,19 @@
 package za.edu.vcconnect.st10068305.database;
 
 public class Databases {
-    public static TeachersDatabase teachersDatabase = new TeachersDatabase();
-    public static StudentsDatabase studentsDatabase = new StudentsDatabase();
+    private static TeachersDatabase teachersDatabase;
+
+    public Databases() {
+
+    }
+
+    public void initialize() {
+        teachersDatabase = new TeachersDatabase();
+
+        teachersDatabase.load();
+    }
+
+    public static TeachersDatabase getTeachersDatabase() {
+        return teachersDatabase;
+    }
 }

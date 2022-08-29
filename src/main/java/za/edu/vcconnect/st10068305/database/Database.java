@@ -3,19 +3,19 @@ package za.edu.vcconnect.st10068305.database;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public abstract class Database {
-    private final FileReader reader;
+    protected final String databaseName;
+    private final File databaseFile;
     protected FileWriter writer;
     protected Gson gson;
 
     public Database(String databaseName) {
+        this.databaseName = databaseName;
+
         File databasesDirectory = new File("databases/");
-        File databaseFile = new File("databases/" + databaseName + ".json");
+        this.databaseFile = new File("databases/" + databaseName + ".json");
 
         if (!databasesDirectory.exists()) databasesDirectory.mkdir();
 
@@ -27,24 +27,27 @@ public abstract class Database {
             }
         }
 
-        try {
-            this.reader = new FileReader("databases/" + databaseName + ".json");
-            this.writer = new FileWriter("databases/" + databaseName + ".json");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
         this.gson = new GsonBuilder().create();
     }
 
     protected String getStoredJsonDataString() throws IOException {
-        StringBuilder builder = new StringBuilder();
+        String fileContent;
 
-        int i;
+        StringBuilder contentBuilder = new StringBuilder();
 
-        while ((i = this.reader.read()) != -1)
-            builder.append((char) i);
+        try (BufferedReader br = new BufferedReader(new FileReader(this.databaseFile))) {
+            String sCurrentLine;
+            while ((sCurrentLine = br.readLine()) != null) {
+                contentBuilder.append(sCurrentLine).append("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        return builder.toString();
+        fileContent = contentBuilder.toString();
+
+        if (fileContent.equals("")) return "[]";
+
+        return fileContent;
     }
 }
