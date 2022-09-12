@@ -1,0 +1,6 @@
+Menu Choice: Chicken Salad
+Special Request: None
+Drink: Milk Shake
+Wants Water
+
+Amount Due: R37.0
